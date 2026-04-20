@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #000;
+    color: #f0e6c5;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('castelo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.25;
+}
+
+h1, h3, hr, h4, p, label, button, #tela-resultado {
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #f3e5ab, #d4af37, #b8960c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h3 {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-left: 4px solid #d4af37;
+    border-right: 4px solid #d4af37;
+}
+
+h4 {
+    background: rgba(212, 175, 55, 0.4);
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 15px;
+    font-size: 1rem;
+    border-left: 5px solid #d4af37;
+    text-align: left;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    border-left: 3px solid #d4af37;
+    text-align: left;
+}
+
+label {
+    display: block;
+    background: rgba(20, 15, 10, 0.8);
+    margin: 0.5rem 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    text-align: left;
+}
+
+label:hover {
+    background: rgba(60, 45, 20, 0.9);
+    border-color: #d4af37;
+}
+
+input[type="radio"] {
+    margin-right: 12px;
+    transform: scale(1.1);
+    accent-color: #d4af37;
+    cursor: pointer;
+}
+
+label:has(input[type="radio"]:checked) {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #ffd700;
+}
+
+button {
+    background: linear-gradient(135deg, #5a3e1b, #2c1a0a);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffefc0;
+    border-radius: 60px;
+    margin: 2rem auto 1.5rem;
+    cursor: pointer;
+    border: 2px solid #d4af37;
+    display: block;
+    width: auto;
+    max-width: 300px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #7a5a2a, #4a2a10);
+    border-color: #ffd700;
+}
+
+#tela-resultado {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 30px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    border: 2px solid #d4af37;
+}
+
+#tela-resultado h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d4af37;
+}
+
+#tela-resultado img {
+    max-width: 180px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    border: 3px solid #d4af37;
+    display: block;
+}
+
+#tela-resultado p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    background: transparent;
+    display: block;
+    text-align: center;
+    border-left: none;
+}
+
+#btn-reiniciar {
+    background: #3a2a15;
+    margin: 1.5rem auto 0;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    display: inline-block;
+    width: auto;
+    border: 1px solid #d4af37;
+}
+
+#btn-reiniciar:hover {
+    background: #5a4015;
+    border-color: #ffd700;
+}
+
+.escondido {
+    display: none;
+}
