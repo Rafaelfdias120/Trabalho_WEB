@@ -30,6 +30,7 @@ body::before {
     background-repeat: no-repeat;
 
     opacity: 0.25;
+    pointer-events: none;
 }
 
 h1, h3, hr, h4, p, label, button, #tela-resultado {

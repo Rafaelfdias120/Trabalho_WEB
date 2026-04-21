@@ -9,10 +9,17 @@
 </head>
 <body>
 <h1>Seu personagem é:Rony Weasley </h1>
-    <h1>Sua pontuação é: </h1>
+    <h1>Sua pontuação é: <span id="pontuacao"></span></h1>
     <h2>conhecido por sua extrema lealdade, coragem e senso de humor. Ruivo, alto, magro e cheio de sardas, ele é o melhor amigo de Harry e Hermione. Rony traz conhecimento prático sobre o mundo bruxo para o trio e se destaca como um fiel companheiro.  </h2>
     <img src="Imagens/rony.webp" alt="">
 
-    <button>Tentar novamente</button>
+    <button onclick="window.location.href='index.html'">Tentar novamente</button>
+
+    <script>
+        const resultado = JSON.parse(localStorage.getItem('quizResultado'));
+        if (resultado) {
+            document.getElementById('pontuacao').textContent = resultado.ron + ' pontos';
+        }
+    </script>
 </body>
 </html>
