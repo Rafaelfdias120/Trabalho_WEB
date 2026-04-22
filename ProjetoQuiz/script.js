@@ -97,6 +97,7 @@ const mostrarResultado = (personagem) => {
     const btnResultado = document.getElementById("btn-resultado");
 
     // Esconde o formulário para focar no resultado
+    document.querySelector("#conteudo-quiz h1").classList.add("escondido");
     const perfisResumo = document.querySelector(".perfis-resumo");
     perfisResumo.classList.add("escondido");
     listaQuestoes.classList.add("escondido");
