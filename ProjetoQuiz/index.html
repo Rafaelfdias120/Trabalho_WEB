@@ -7,135 +7,137 @@
     <title>O Universo de Hogwarts</title>
   </head>
   <body>
-    <h1>Descubra seu Bruxo Interior</h1>
-    <h3>
-      Bem-vindo à Escola de Magia e Bruxaria de Hogwarts! Você já se perguntou
-      qual dos famosos integrantes do "Trio de Ouro" melhor representa a sua
-      personalidade? Através deste questionário místico, analisaremos suas
-      escolhas, coragem e sabedoria para revelar se você possui a audácia de
-      Harry Potter, a inteligência brilhante de Hermione Granger ou a lealdade
-      incondicional de Ron Weasley. Prepare sua varinha e comece o teste!
-    </h3>
-    <br>
-    <h4>1. Harry Potter: Corajoso, impulsivo e focado em fazer o que é certo.</h4>
-    <h4>2. Hermione Granger: Lógica, dedicada aos estudos e extremamente preparada.</h4>
-    <h4>3. Ron Weasley: Leal, engraçado e valoriza as amizades acima de tudo.</h4>
 
-    <!-- 
+    <div id="tela-boas-vindas">
+        <h1>Bem-vindo à Escola de Magia e Bruxaria de Hogwarts!</h1>
+        <div class="card-inicio">
+            <h3>
+                Você já se perguntou qual dos famosos integrantes do 
+                "Trio de Ouro" melhor representa a sua personalidade? Através deste questionário místico, analisaremos suas escolhas, coragem e sabedoria.
+            </h3>
+            <p>Prepare sua varinha e descubra se você possui a audácia de Harry Potter, a inteligência brilhante de Hermione Granger ou a lealdade incondicional de Ron Weasley.</p>
+            <button id="btn-iniciar">Descubra seu Bruxo Interior</button>
+        </div>
+    </div>
+
+    <div id="conteudo-quiz" class="escondido">
+        <h1>Descubra seu Bruxo Interior</h1>
+        
+        <div class="perfis-resumo">
+            <h4>1. Harry Potter: Corajoso, impulsivo e focado em fazer o que é certo.</h4>
+            <h4>2. Hermione Granger: Lógica, dedicada aos estudos e extremamente preparada.</h4>
+            <h4>3. Ron Weasley: Leal, engraçado e valoriza as amizades acima de tudo.</h4>
+        </div>
+
+        <div id="questoes-lista">
+            <!-- 
     PERGUNTA 01
     Alternativa 01: harry = 01 |  hermione = 03 | Ron = 01 
     Alternativa 02: harry = 03 |  hermione = 01 | Ron = 02 
     Alternativa 03: harry = 02 |  hermione = 02 | Ron = 03 
     --> 
-    <p>Pergunta 1: Como você se prepara para um desafio difícil?</p>
-    <label><input type="radio" name="p1" value="1" data-harry="1" data-hermione="3" data-ron="1">Leio todos os livros disponíveis sobre o assunto.</label><br>
-    <label><input type="radio" name="p1" value="2" data-harry="3" data-hermione="1" data-ron="2">Confio no meu instinto e enfrento na hora.</label><br>
-    <label><input type="radio" name="p1" value="3" data-harry="2" data-hermione="2" data-ron="3">Peço ajuda aos meus melhores amigos.</label><br>
-
-    <!-- 
+            <p>Pergunta 1: Como você se prepara para um desafio difícil?</p>
+            <label><input type="radio" name="p1" data-harry="1" data-hermione="3" data-ron="1">Leio todos os livros disponíveis sobre o assunto.</label><br>
+            <label><input type="radio" name="p1" data-harry="3" data-hermione="1" data-ron="2">Confio no meu instinto e enfrento na hora.</label><br>
+            <label><input type="radio" name="p1" data-harry="2" data-hermione="2" data-ron="3">Peço ajuda aos meus melhores amigos.</label><br>
+            <!-- 
       PERGUNTA 02 
       Alternativa 01: harry = 03 |  hermione = 02 | Ron = 01 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 02 |  hermione = 01 | Ron = 03 
     -->
-    <p>Pergunta 2: Qual seria sua aula favorita em Hogwarts?</p>
-    <label><input type="radio" name="p2" value="1" data-harry="3" data-hermione="2" data-ron="1">Defesa Contra as Artes das Trevas.</label><br>
-    <label><input type="radio" name="p2" value="2" data-harry="1" data-hermione="3" data-ron="1">História da Magia ou Aritmancia.</label><br>
-    <label><input type="radio" name="p2" value="3" data-harry="2" data-hermione="1" data-ron="3">Trato de Criaturas Mágicas.</label><br>
-
-    <!-- 
+            <p>Pergunta 2: Qual seria sua aula favorita em Hogwarts?</p>
+            <label><input type="radio" name="p2" data-harry="3" data-hermione="2" data-ron="1">Defesa Contra as Artes das Trevas.</label><br>
+            <label><input type="radio" name="p2" data-harry="1" data-hermione="3" data-ron="1">História da Magia ou Aritmancia.</label><br>
+            <label><input type="radio" name="p2" data-harry="2" data-hermione="1" data-ron="3">Trato de Criaturas Mágicas.</label><br>
+          <!-- 
       PERGUNTA 03
       Alternativa 01: harry = 03 |  hermione = 01 | Ron = 02 
       Alternativa 02: harry = 02 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 01 |  hermione = 02 | Ron = 03 
     -->
-    <p>Pergunta 3: O que você faria se visse alguém sendo injustiçado?</p>
-    <label><input type="radio" name="p3" value="1" data-harry="3" data-hermione="1" data-ron="2">Interviria imediatamente, não importa o risco.</label><br>
-    <label><input type="radio" name="p3" value="2" data-harry="2" data-hermione="3" data-ron="1">Elaboraria um plano lógico para resolver a situação.</label><br>
-    <label><input type="radio" name="p3" value="3" data-harry="1" data-hermione="2" data-ron="3">Ficaria ao lado da pessoa para dar apoio moral.</label><br>
-
-    <!-- 
+            <p>Pergunta 3: O que você faria se visse alguém sendo injustiçado?</p>
+            <label><input type="radio" name="p3" data-harry="3" data-hermione="1" data-ron="2">Interviria imediatamente, não importa o risco.</label><br>
+            <label><input type="radio" name="p3" data-harry="2" data-hermione="3" data-ron="1">Elaboraria um plano lógico para resolver a situação.</label><br>
+            <label><input type="radio" name="p3" data-harry="1" data-hermione="2" data-ron="3">Ficaria ao lado da pessoa para dar apoio moral.</label><br>
+          <!-- 
       PERGUNTA 04
       Alternativa 01: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 02: harry = 02 |  hermione = 02 | Ron = 03 
       Alternativa 03: harry = 03 |  hermione = 01 | Ron = 01 
     -->
-    <p>Pergunta 4: Qual é o seu maior medo?</p>
-    <label><input type="radio" name="p4" value="1" data-harry="1" data-hermione="3" data-ron="1">Fracassar em uma prova importante.</label><br>
-    <label><input type="radio" name="p4" value="2" data-harry="2" data-hermione="2" data-ron="3">Perder as pessoas que amo.</label><br>
-    <label><input type="radio" name="p4" value="3" data-harry="3" data-hermione="1" data-ron="1">Ver o mal triunfando sobre o bem.</label><br>
+            <p>Pergunta 4: Qual é o seu maior medo?</p>
+            <label><input type="radio" name="p4" data-harry="1" data-hermione="3" data-ron="1">Fracassar em uma prova importante.</label><br>
+            <label><input type="radio" name="p4" data-harry="2" data-hermione="2" data-ron="3">Perder as pessoas que amo.</label><br>
+            <label><input type="radio" name="p4" data-harry="3" data-hermione="1" data-ron="1">Ver o mal triunfando sobre o bem.</label><br>
 
-    <!-- 
+             <!-- 
       PERGUNTA 05
       Alternativa 01: harry = 03 |  hermione = 01 | Ron = 02 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 01 |  hermione = 01 | Ron = 03 
     -->
-    <p>Pergunta 5: Como você passa seu tempo livre?</p>
-    <label><input type="radio" name="p5" value="1" data-harry="3" data-hermione="1" data-ron="2">Praticando esportes ou atividades ao ar livre.</label><br>
-    <label><input type="radio" name="p5" value="2" data-harry="1" data-hermione="3" data-ron="1">Estudando novos tópicos interessantes.</label><br>
-    <label><input type="radio" name="p5" value="3" data-harry="1" data-hermione="1" data-ron="3">Relaxando no salão comunal com jogos e lanches.</label><br>
-
-    <!-- 
+            <p>Pergunta 5: Como você passa seu tempo livre?</p>
+            <label><input type="radio" name="p5" data-harry="3" data-hermione="1" data-ron="2">Praticando esportes ou atividades ao ar livre.</label><br>
+            <label><input type="radio" name="p5" data-harry="1" data-hermione="3" data-ron="1">Estudando novos tópicos interessantes.</label><br>
+            <label><input type="radio" name="p5" data-harry="1" data-hermione="1" data-ron="3">Relaxando no salão comunal com jogos e lanches.</label><br>
+           <!-- 
       PERGUNTA 06
       Alternativa 01: harry = 03 |  hermione = 02 | Ron = 01 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 01 |  hermione = 01 | Ron = 03 
     -->
-    <p>Pergunta 6: Escolha um animal de estimação para levar a Hogwarts</p>
-    <label><input type="radio" name="p6" value="1" data-harry="3" data-hermione="2" data-ron="1">Uma Coruja, para ser útil e independente.</label><br>
-    <label><input type="radio" name="p6" value="2" data-harry="1" data-hermione="3" data-ron="1">Um Gato, por ser inteligente e observador.</label><br>
-    <label><input type="radio" name="p6" value="3" data-harry="1" data-hermione="1" data-ron="3">Um Rato ou algo incomum, por apego emocional.</label><br>
-
-    <!-- 
+            <p>Pergunta 6: Escolha um animal de estimação para levar a Hogwarts</p>
+            <label><input type="radio" name="p6" data-harry="3" data-hermione="2" data-ron="1">Uma Coruja, para ser útil e independente.</label><br>
+            <label><input type="radio" name="p6" data-harry="1" data-hermione="3" data-ron="1">Um Gato, por ser inteligente e observador.</label><br>
+            <label><input type="radio" name="p6" data-harry="1" data-hermione="1" data-ron="3">Um Rato ou algo incomum, por apego emocional.</label><br>
+          <!-- 
       PERGUNTA 07
       Alternativa 01: harry = 03 |  hermione = 02 | Ron = 01 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 02 |  hermione = 01 | Ron = 03 
     -->
-    <p>Pergunta 7: Qual característica você mais valoriza em uma pessoa?</p>
-    <label><input type="radio" name="p7" value="1" data-harry="3" data-hermione="2" data-ron="1">Coragem.</label><br>
-    <label><input type="radio" name="p7" value="2" data-harry="1" data-hermione="3" data-ron="1">Inteligência.</label><br>
-    <label><input type="radio" name="p7" value="3" data-harry="1" data-hermione="1" data-ron="3">Lealdade.</label><br>
-
-    <!-- 
+            <p>Pergunta 7: Qual característica você mais valoriza em uma pessoa?</p>
+            <label><input type="radio" name="p7" data-harry="3" data-hermione="2" data-ron="1">Coragem.</label><br>
+            <label><input type="radio" name="p7" data-harry="1" data-hermione="3" data-ron="1">Inteligência.</label><br>
+            <label><input type="radio" name="p7" data-harry="1" data-hermione="1" data-ron="3">Lealdade.</label><br>
+          <!-- 
       PERGUNTA 08
       Alternativa 01: harry = 03 |  hermione = 01 | Ron = 02 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 02 |  hermione = 02 | Ron = 03 
     -->
-    <p>Pergunta 8: Se você encontrasse um objeto mágico desconhecido, o que faria?</p>
-    <label><input type="radio" name="p8" value="1" data-harry="3" data-hermione="1" data-ron="2">Usaria para ver o que acontece.</label><br>
-    <label><input type="radio" name="p8" value="2" data-harry="1" data-hermione="3" data-ron="1">Pesquisaria na biblioteca antes de tocar.</label><br>
-    <label><input type="radio" name="p8" value="3" data-harry="2" data-hermione="2" data-ron="3">Mostraria para alguém mais experiente.</label><br>
-
-    <!-- 
+            <p>Pergunta 8: Se você encontrasse um objeto mágico desconhecido, o que faria?</p>
+            <label><input type="radio" name="p8" data-harry="3" data-hermione="1" data-ron="2">Usaria para ver o que acontece.</label><br>
+            <label><input type="radio" name="p8" data-harry="1" data-hermione="3" data-ron="1">Pesquisaria na biblioteca antes de tocar.</label><br>
+            <label><input type="radio" name="p8" data-harry="2" data-hermione="2" data-ron="3">Mostraria para alguém mais experiente.</label><br>
+          <!-- 
       PERGUNTA 09
       Alternativa 01: harry = 03 |  hermione = 01 | Ron = 02 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 02 |  hermione = 02 | Ron = 03 
     -->
-    <p>Pergunta 9: O que é mais importante em uma equipe?</p>
-    <label><input type="radio" name="p9" value="1" data-harry="3" data-hermione="1" data-ron="2">Ter um líder forte.</label><br>
-    <label><input type="radio" name="p9" value="2" data-harry="1" data-hermione="3" data-ron="1">Ter uma estratégia impecável.</label><br>
-    <label><input type="radio" name="p9" value="3" data-harry="2" data-hermione="2" data-ron="3">O companheirismo entre todos.</label><br>
-
-    <!-- 
+            <p>Pergunta 9: O que é mais importante em uma equipe?</p>
+            <label><input type="radio" name="p9" data-harry="3" data-hermione="1" data-ron="2">Ter um líder forte.</label><br>
+            <label><input type="radio" name="p9" data-harry="1" data-hermione="3" data-ron="1">Ter uma estratégia impecável.</label><br>
+            <label><input type="radio" name="p9" data-harry="2" data-hermione="2" data-ron="3">O companheirismo entre todos.</label><br>
+          <!-- 
       PERGUNTA 10
       Alternativa 01: harry = 03 |  hermione = 02 | Ron = 02 
       Alternativa 02: harry = 01 |  hermione = 03 | Ron = 01 
       Alternativa 03: harry = 01 |  hermione = 01 | Ron = 03 
     -->
-    <p>Pergunta 10: Qual seria seu maior desejo ao olhar o Espelho de Ojesed?</p>
-    <label><input type="radio" name="p10" value="1" data-harry="3" data-hermione="2" data-ron="1">Ser reconhecido por meus grandes feitos.</label><br>
-    <label><input type="radio" name="p10" value="2" data-harry="1" data-hermione="3" data-ron="1">Dominar todo o conhecimento do mundo.</label><br>
-    <label><input type="radio" name="p10" value="3" data-harry="1" data-hermione="1" data-ron="3">Ver minha família e amigos felizes e seguros.</label><br>
-    
-    <div id="tela-resultado">
-      
-      <button id="btn-resultado">Ver Resultado</button>
-    </div>
+            <p>Pergunta 10: Qual seria seu maior desejo ao olhar o Espelho de Ojesed?</p>
+            <label><input type="radio" name="p10" data-harry="3" data-hermione="2" data-ron="1">Ser reconhecido por meus grandes feitos.</label><br>
+            <label><input type="radio" name="p10" data-harry="1" data-hermione="3" data-ron="1">Dominar todo o conhecimento do mundo.</label><br>
+            <label><input type="radio" name="p10" data-harry="1" data-hermione="1" data-ron="3">Ver minha família e amigos felizes e seguros.</label><br>
+        </div>
 
+        <button id="btn-resultado">Ver Resultado</button>
+
+        <div id="tela-resultado" class="escondido">
+            </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

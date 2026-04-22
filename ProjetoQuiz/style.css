@@ -180,6 +180,40 @@ button:hover {
     border-color: #ffd700;
 }
 
+/* Gerenciamento de Telas */
 .escondido {
-    display: none;
+    display: none !important;
+}
+
+#tela-boas-vindas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.card-inicio {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2.5rem;
+    border-radius: 30px;
+    border: 2px solid #d4af37;
+    max-width: 750px;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+#btn-iniciar {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #d4af37, #b8960c);
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+#btn-iniciar:hover {
+    transform: scale(1.05);
+}
+
+.perfis-resumo {
+    margin-bottom: 2rem;
 }
