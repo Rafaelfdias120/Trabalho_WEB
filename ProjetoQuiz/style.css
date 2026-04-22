@@ -207,10 +207,6 @@ button:hover {
     margin-top: 1.5rem;
 }
 
-#btn-iniciar:hover {
-    transform: scale(1.05);
-}
-
 .perfis-resumo {
     margin-bottom: 2rem;
 }
