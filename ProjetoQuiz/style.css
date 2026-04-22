@@ -206,9 +206,6 @@ button:hover {
 
 #btn-iniciar {
     margin-top: 1.5rem;
-    background: linear-gradient(135deg, #d4af37, #b8960c);
-    color: #000;
-    transition: transform 0.3s ease;
 }
 
 #btn-iniciar:hover {
