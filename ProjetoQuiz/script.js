@@ -7,14 +7,11 @@ class Personagem {
     }
 }
 
-//Iniciar o Teste
 document.getElementById('btn-iniciar').addEventListener('click', function() {
     document.getElementById('tela-boas-vindas').classList.add('escondido');
     document.getElementById('conteudo-quiz').classList.remove('escondido');
-    //window.scrollTo(0, 0); // força o navegador a jogar a visão do usuário de volta para o topo da página instantaneamente
 });
 
-//Processar o Resultado
 document.getElementById('btn-resultado').addEventListener('click', function () {
 
     if (!validacao()) return;
@@ -23,7 +20,6 @@ document.getElementById('btn-resultado').addEventListener('click', function () {
     personagemVencedor(resultado);
 });
 
-//Validar se todas as perguntas foram respondidas
 const validacao = () => {
     for (let i = 1; i <= 10; i++) {
         const resposta = document.querySelector(`input[name="p${i}"]:checked`);
@@ -36,7 +32,6 @@ const validacao = () => {
     return true;
 }
 
-//Somar os pontos
 const calcularResultado = () => {
     let harry = 0;
     let hermione = 0;
@@ -52,11 +47,8 @@ const calcularResultado = () => {
     return { harry, hermione, ron };
 }
 
-//Decidir o Vencedor
 const personagemVencedor = (resultado) => {
     
-    localStorage.setItem('quizResultado', JSON.stringify(resultado));
-
     const personagens = [
         new Personagem(
             "Harry Potter",
@@ -89,14 +81,12 @@ const personagemVencedor = (resultado) => {
     mostrarResultado(vencedor);
 }
 
-// Exibir a tela final
 const mostrarResultado = (personagem) => {
 
     const tela = document.getElementById("tela-resultado");
     const listaQuestoes = document.getElementById("questoes-lista");
     const btnResultado = document.getElementById("btn-resultado");
 
-    // Esconde o formulário para focar no resultado
     document.querySelector("#conteudo-quiz h1").classList.add("escondido");
     const perfisResumo = document.querySelector(".perfis-resumo");
     perfisResumo.classList.add("escondido");
@@ -115,10 +105,7 @@ const mostrarResultado = (personagem) => {
     tela.classList.remove("escondido");
     window.scrollTo(0, 0); 
 }
-//Reiniciar
 const reiniciar = () => {
-    localStorage.clear();
-    //Garante que o navegador "apague as marcações"
     const opcoes = document.querySelectorAll('input[type="radio"]');
     opcoes.forEach(opcao => {
         opcao.checked = false;
