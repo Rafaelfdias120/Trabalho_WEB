@@ -103,7 +103,6 @@ const mostrarResultado = (personagem) => {
     `;
 
     tela.classList.remove("escondido");
-    window.scrollTo(0, 0); 
 }
 const reiniciar = () => {
     const opcoes = document.querySelectorAll('input[type="radio"]');
